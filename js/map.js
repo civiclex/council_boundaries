@@ -98,7 +98,7 @@ map.addLayer(CD21Layer)
 map.addLayer(baseLayer)
 
 // Create groupings for layer controller
-/* var baseLayers = {
+var baseLayers = {
     "Basemap": basemap
 };
 
@@ -112,7 +112,7 @@ var yearLayers = {
 /* var colorLayers = {
     "County Outlines": counties,
     "Urban Areas": urban_areas
-} */
+}
 
 // Add layer controller to Map
 L.control.layers(null, yearLayers).addTo(map); // the first item is always a radio button
