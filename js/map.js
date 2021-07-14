@@ -115,7 +115,7 @@ farmerLayer = L.geoJson(data, {
 })
 }); */
 
-// Get geojson background layers
+/* // Get geojson background layers
 $.getJSON("data/urban_areas.geojson", function(data) {
 urban_areaLayer = L.geoJson(data, {
     //pane: 'urban_areas', 
@@ -155,13 +155,70 @@ statesLayer = L.geoJson(data, {
     fillColor: '#ffffff',
     fillOpacity: 1
 }).addTo(map);
-});
+}); */
+
+// Get geojson background layers
+$.getJSON("data/Council_District_1972.geojson", function(data) {
+    CD_72Layer = L.geoJson(data, {
+        //pane: 'urban_areas', 
+        //onEachFeature: function ( feature, layer ){
+        //urban_areas.addLayer(layer)},
+        //pane: "pane450",
+        fillOpacity: .25,
+        weight: 0,
+        opacity: 0,
+        fillColor: '#BFDFEC'
+    }).addTo(map);
+       //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
+    });
+
+$.getJSON("data/Council_District_1982.geojson", function(data) {
+    CD_82Layer = L.geoJson(data, {
+        //pane: 'urban_areas', 
+        //onEachFeature: function ( feature, layer ){
+        //urban_areas.addLayer(layer)},
+        //pane: "pane450",
+        fillOpacity: .25,
+        weight: 0,
+        opacity: 0,
+        fillColor: '#BFDFEC'
+    }).addTo(map);
+        //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
+    });
+
+$.getJSON("data/Council_District_1992.geojson", function(data) {
+    CD_92Layer = L.geoJson(data, {
+        //pane: 'urban_areas', 
+        //onEachFeature: function ( feature, layer ){
+        //urban_areas.addLayer(layer)},
+        //pane: "pane450",
+        fillOpacity: .25,
+        weight: 0,
+        opacity: 0,
+        fillColor: '#BFDFEC'
+    }).addTo(map);
+        //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
+    });
+
+$.getJSON("data/Council_District_2021.geojson", function(data) {
+    CD_21Layer = L.geoJson(data, {
+        //pane: 'urban_areas', 
+        //onEachFeature: function ( feature, layer ){
+        //urban_areas.addLayer(layer)},
+        //pane: "pane450",
+        fillOpacity: .25,
+        weight: 0,
+        opacity: 0,
+        fillColor: '#BFDFEC'
+    }).addTo(map);
+        //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
+    });
 
 // Add layers to map so they are automatically selected in the layer control
-map.addLayer(brewers)
-map.addLayer(distillers)
-map.addLayer(millers)
-map.addLayer(farmers)
+map.addLayer(CD_72)
+map.addLayer(CD_82)
+map.addLayer(CD_92)
+map.addLayer(CD_21)
 
 // Create groupings for layer controller
 var baseLayers = {
