@@ -43,6 +43,26 @@ var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{
 	subdomains: 'abcd',
 });
 
+//Create a leaflet control for the legend
+//Give the legend an onAdd handler
+//Add the legend to the map
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = [1000, 2000, 3000, 4000, 5000],
+        labels = [];
+    // loop through our density intervals and generate a label with a colored square for each interval
+    /* for (var i = 0; i < grades.length; i++) {
+        console.log("legend for "+ grades[i] + " to "+grades[i+1]+" = " +getColor(grades[i] + 1));
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }  
+    return div; */
+};
+legend.addTo(map);
+
 //map.setView([38.0147,-84.483], 11);
 
 // Use JQuery to get our geojson data
