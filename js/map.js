@@ -3,10 +3,10 @@
 //distillers = L.layerGroup(),
 //millers = L.layerGroup(),
 //farmers = L.layerGroup(),
- var states = L.layerGroup(),
-counties = L.layerGroup(), 
-urban_areas = L.layerGroup(),
-CD_72 = L.layerGroup(),
+//states = L.layerGroup(),
+//counties = L.layerGroup(), 
+//urban_areas = L.layerGroup(),
+var CD_72 = L.layerGroup(),
 CD_82 = L.layerGroup(),
 CD_92 = L.layerGroup(),
 CD_21 = L.layerGroup();
@@ -239,10 +239,10 @@ var yearLayers = {
     "2021": Cd_21
 };
 
-var colorLayers = {
+/* var colorLayers = {
 "County Outlines": counties,
 "Urban Areas": urban_areas
-}
+} */
 
 // Add layer controller to Map
 L.control.layers(null, yearLayers).addTo(map); // the first item is always a radio button
