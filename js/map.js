@@ -27,9 +27,9 @@ var map = L.map('map', {
 });
 
 // Create additional map panes to fix layering issue
-map.createPane("pane200").style.zIndex = 200; // tile pane
-map.createPane("pane450").style.zIndex = 450; // between overlays and shadows
-map.createPane("pane600").style.zIndex = 600; // marker pane
+//map.createPane("pane200").style.zIndex = 200; // tile pane
+//map.createPane("pane450").style.zIndex = 450; // between overlays and shadows
+//map.createPane("pane600").style.zIndex = 600; // marker pane
 
 // Add base map
 /* var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -168,11 +168,18 @@ var baseLayers = {
 "Basemap": basemap
 };
 
-var userLayers = {
+/* var userLayers = {
 "Brewers": brewers,
 "Distillers": distillers,
 "Millers & Bakeries": millers,
 "Farmers": farmers
+}; */
+
+var yearLayers = {
+    "1972": CD_72,
+    "1982": CD_82,
+    "1992": CD_92,
+    "2021": Cd_21
 };
 
 var colorLayers = {
@@ -181,4 +188,4 @@ var colorLayers = {
 }
 
 // Add layer controller to Map
-L.control.layers(null, userLayers).addTo(map); // the first item is always a radio button
+L.control.layers(null, yearLayers).addTo(map); // the first item is always a radio button
