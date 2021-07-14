@@ -5,7 +5,11 @@ millers = L.layerGroup(),
 farmers = L.layerGroup(),
 states = L.layerGroup(),
 counties = L.layerGroup(), 
-urban_areas = L.layerGroup(); 
+urban_areas = L.layerGroup(),
+CD_72 = L.layerGroup(),
+CD_82 = L.layerGroup(),
+CD_92 = L.layerGroup(),
+CD_21 = L.layerGroup();
 
 
 // Create Map Object centered on the middle of Kentucky
