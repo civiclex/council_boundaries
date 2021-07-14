@@ -240,7 +240,7 @@ var yearLayers = {
     "1972": CD_72,
     "1982": CD_82,
     "1992": CD_92,
-    "2021": Cd_21
+    "2021": CD_21
 };
 
 /* var colorLayers = {
