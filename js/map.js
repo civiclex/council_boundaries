@@ -233,7 +233,7 @@ $.getJSON("data/Council_District_2012.geojson", function(data) {
     });
 
 // Add layers to map so they are automatically selected in the layer control
-map.addLayer(CD_72)
+map.addLayer(CD_72Layer)
 map.addLayer(CD_82)
 map.addLayer(CD_92)
 map.addLayer(CD_02)
@@ -252,7 +252,7 @@ var baseLayers = {
 }; */
 
 var yearLayers = {
-    "1972": CD_72,
+    "1972": CD_72Layer,
     "1982": CD_82,
     "1992": CD_92,
     "2002": CD_02,
