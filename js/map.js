@@ -255,7 +255,7 @@ var yearLayers = {
     "1982": CD_82,
     "1992": CD_92,
     "2002": CD_02,
-    "2012": CD_21
+    "2012": CD_12
 };
 
 /* var colorLayers = {
