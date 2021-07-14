@@ -164,10 +164,11 @@ $.getJSON("data/Council_District_1972.geojson", function(data) {
         //onEachFeature: function ( feature, layer ){
         //urban_areas.addLayer(layer)},
         //pane: "pane450",
-        fillOpacity: .25,
-        weight: 0,
-        opacity: 0,
-        fillColor: '#BFDFEC'
+        //fillOpacity: .25,
+        strokeColor: '#d55e00',
+        weight: 2,
+        //opacity: 0,
+        //fillColor: '#BFDFEC'
     }).addTo(map);
        //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
     });
@@ -178,10 +179,11 @@ $.getJSON("data/Council_District_1982.geojson", function(data) {
         //onEachFeature: function ( feature, layer ){
         //urban_areas.addLayer(layer)},
         //pane: "pane450",
-        fillOpacity: .25,
-        weight: 0,
-        opacity: 0,
-        fillColor: '#BFDFEC'
+        //fillOpacity: .25,
+        strokeColor: '#cc79a7',
+        weight: 2,
+        //opacity: 0,
+        //fillColor: '#BFDFEC'
     }).addTo(map);
         //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
     });
@@ -192,10 +194,11 @@ $.getJSON("data/Council_District_1992.geojson", function(data) {
         //onEachFeature: function ( feature, layer ){
         //urban_areas.addLayer(layer)},
         //pane: "pane450",
-        fillOpacity: .25,
-        weight: 0,
-        opacity: 0,
-        fillColor: '#BFDFEC'
+        //fillOpacity: .25,
+        strokeColor: '#0072b2',
+        weight: 2,
+        //opacity: 0,
+        //fillColor: '#BFDFEC'
     }).addTo(map);
         //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
     });
@@ -206,10 +209,11 @@ $.getJSON("data/Council_District_2021.geojson", function(data) {
         //onEachFeature: function ( feature, layer ){
         //urban_areas.addLayer(layer)},
         //pane: "pane450",
-        fillOpacity: .25,
-        weight: 0,
-        opacity: 0,
-        fillColor: '#BFDFEC'
+        //fillOpacity: .25,
+        strokeColor: '#f0e442',
+        weight: 2,
+        //opacity: 0,
+        //fillColor: '#BFDFEC'
     }).addTo(map);
         //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
     });
