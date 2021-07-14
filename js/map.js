@@ -1,9 +1,9 @@
 // Create empty layerGroups for the layer control object
-var brewers = L.layerGroup(),
-distillers = L.layerGroup(),
-millers = L.layerGroup(),
-farmers = L.layerGroup(),
-states = L.layerGroup(),
+//var brewers = L.layerGroup(),
+//distillers = L.layerGroup(),
+//millers = L.layerGroup(),
+//farmers = L.layerGroup(),
+ var states = L.layerGroup(),
 counties = L.layerGroup(), 
 urban_areas = L.layerGroup(),
 CD_72 = L.layerGroup(),
@@ -12,12 +12,19 @@ CD_92 = L.layerGroup(),
 CD_21 = L.layerGroup();
 
 
-// Create Map Object centered on the middle of Kentucky
+/* // Create Map Object centered on the middle of Kentucky (Original)
 var map = L.map('map', {
 minZoom: 7,
 maxZoom: 12
-});
+}); */
 
+//Initialize the leaflet map
+var map = L.map('map', {
+    //center: [38.0147,-84.483],
+    //zoom: 11,
+    zoomControl: true,
+    dragging: true,
+});
 
 // Create additional map panes to fix layering issue
 map.createPane("pane200").style.zIndex = 200; // tile pane
@@ -25,12 +32,18 @@ map.createPane("pane450").style.zIndex = 450; // between overlays and shadows
 map.createPane("pane600").style.zIndex = 600; // marker pane
 
 // Add base map
-var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+/* var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 subdomains: 'abcd'
+}); */
+
+// Add the base map
+var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
 });
 
-map.setView([37.7, -85.8], 7);
+map.setView([38.0147,-84.483], 11);
 
 // Use JQuery to get our geojson data
 /* $.getJSON("data/brewers.geojson", function(data) {
