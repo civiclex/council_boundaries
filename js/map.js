@@ -9,8 +9,8 @@
 var CD_72 = L.layerGroup(),
 CD_82 = L.layerGroup(),
 CD_92 = L.layerGroup(),
-CD_21 = L.layerGroup();
-
+CD_02 = L.layerGroup(),
+CD_12 = L.layerGroup();
 
 /* // Create Map Object centered on the middle of Kentucky (Original)
 var map = L.map('map', {
@@ -20,8 +20,8 @@ maxZoom: 12
 
 //Initialize the leaflet map
 var map = L.map('map', {
-    //center: [38.0147,-84.483],
-    //zoom: 11,
+    center: [38.0147,-84.483],
+    zoom: 11,
     zoomControl: true,
     dragging: true,
 });
@@ -43,7 +43,7 @@ var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{
 	subdomains: 'abcd',
 });
 
-map.setView([38.0147,-84.483], 11);
+//map.setView([38.0147,-84.483], 11);
 
 // Use JQuery to get our geojson data
 /* $.getJSON("data/brewers.geojson", function(data) {
@@ -202,9 +202,23 @@ $.getJSON("data/Council_District_1992.geojson", function(data) {
     }).addTo(map);
         //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
     });
+$.getJSON("data/Council_District_2002.geojson", function(data) {
+    CD_02Layer = L.geoJson(data, {
+        //pane: 'urban_areas', 
+        //onEachFeature: function ( feature, layer ){
+        //urban_areas.addLayer(layer)},
+        //pane: "pane450",
+        //fillOpacity: .25,
+        strokeColor: '#f0e442',
+        weight: 2,
+        //opacity: 0,
+        //fillColor: '#BFDFEC'
+    }).addTo(map);
+        //map.fitBounds(urban_areaLayer.getBounds()); // automatically fits the map to boundaries of this layer
+    });
 
-$.getJSON("data/Council_District_2021.geojson", function(data) {
-    CD_21Layer = L.geoJson(data, {
+$.getJSON("data/Council_District_2012.geojson", function(data) {
+    CD_12Layer = L.geoJson(data, {
         //pane: 'urban_areas', 
         //onEachFeature: function ( feature, layer ){
         //urban_areas.addLayer(layer)},
@@ -240,7 +254,8 @@ var yearLayers = {
     "1972": CD_72,
     "1982": CD_82,
     "1992": CD_92,
-    "2021": CD_21
+    "2002": CD_02,
+    "2012": CD_21
 };
 
 /* var colorLayers = {
