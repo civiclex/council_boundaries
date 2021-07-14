@@ -33,7 +33,7 @@ subdomains: 'abcd'
 map.setView([37.7, -85.8], 7);
 
 // Use JQuery to get our geojson data
-$.getJSON("data/brewers.geojson", function(data) {
+/* $.getJSON("data/brewers.geojson", function(data) {
 brewerLayer = L.geoJson(data, {
     onEachFeature: function (feature, layer){
         brewers.addLayer(layer), layer.bindPopup('<b>'+feature.properties.LicenseeName+'</b><br>DBA: '+feature.properties.DBA+'<br>'+feature.properties.Address+'<br>'+feature.properties.City+', KY')},
@@ -48,9 +48,9 @@ brewerLayer = L.geoJson(data, {
         });
     }
 })
-});
+}); */
 
-$.getJSON("data/distillers.geojson", function(data) {
+/* $.getJSON("data/distillers.geojson", function(data) {
 distillerLayer = L.geoJson(data, {
     onEachFeature: function (feature, layer){
         distillers.addLayer(layer), layer.bindPopup('<b>'+feature.properties.LicenseeName+'</b><br>DBA: '+feature.properties.DBA+'<br>'+feature.properties.Address+'<br>'+feature.properties.City+', KY')},
@@ -65,9 +65,9 @@ distillerLayer = L.geoJson(data, {
         });
     }
 })
-});
+}); */
 
-$.getJSON("data/millers.geojson", function(data) {
+/* $.getJSON("data/millers.geojson", function(data) {
 millerLayer = L.geoJson(data, {
     onEachFeature: function ( feature, layer ){
         millers.addLayer(layer), layer.bindPopup('<b>'+feature.properties.Name+"</b><br>"+feature.properties.Address+"<br>"+feature.properties.City+', KY')},
@@ -82,9 +82,9 @@ millerLayer = L.geoJson(data, {
         });
     }
 })
-});
+}); */
 
-$.getJSON("data/farmers.geojson", function(data) {
+/* $.getJSON("data/farmers.geojson", function(data) {
 farmerLayer = L.geoJson(data, {
     onEachFeature: function ( feature, layer ){
     farmers.addLayer(layer), layer.bindPopup('<b>'+feature.properties.Farm_Name+'</b>')},
@@ -100,7 +100,7 @@ farmerLayer = L.geoJson(data, {
     });
     }
 })
-});
+}); */
 
 // Get geojson background layers
 $.getJSON("data/urban_areas.geojson", function(data) {
