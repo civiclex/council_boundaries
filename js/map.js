@@ -90,3 +90,28 @@ $.getJSON("data/Council_District_1972.geojson", function(data) {
 map.fitBounds(boundaryLayer.getBounds());
 }); */
 
+// Add layers to map so they are automatically selected in the layer control
+map.addLayer(CD72Layer)
+map.addLayer(CD82Layer)
+map.addLayer(CD92Layer)
+map.addLayer(CD21Layer)
+
+// Create groupings for layer controller
+var baseLayers = {
+    "Basemap": basemap
+};
+
+var yearLayers = {
+    "1972": CD72Layer,
+    "1982": CD82Layer,
+    "1992": CD92Layer,
+    "2021": CD21Layer
+};
+
+/* var colorLayers = {
+    "County Outlines": counties,
+    "Urban Areas": urban_areas
+} */
+
+// Add layer controller to Map
+L.control.layers(null, yearLayers).addTo(map); // the first item is always a radio button
