@@ -95,9 +95,10 @@ map.addLayer(CD72Layer)
 map.addLayer(CD82Layer)
 map.addLayer(CD92Layer)
 map.addLayer(CD21Layer)
+map.addLayer(baseLayer)
 
 // Create groupings for layer controller
-var baseLayers = {
+/* var baseLayers = {
     "Basemap": basemap
 };
 
@@ -107,7 +108,7 @@ var yearLayers = {
     "1992": CD92Layer,
     "2021": CD21Layer
 };
-
+ */
 /* var colorLayers = {
     "County Outlines": counties,
     "Urban Areas": urban_areas
