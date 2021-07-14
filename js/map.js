@@ -236,7 +236,8 @@ $.getJSON("data/Council_District_2012.geojson", function(data) {
 map.addLayer(CD_72)
 map.addLayer(CD_82)
 map.addLayer(CD_92)
-map.addLayer(CD_21)
+map.addLayer(CD_02)
+map.addLayer(CD_12)
 
 // Create groupings for layer controller
 var baseLayers = {
